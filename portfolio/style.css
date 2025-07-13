@@ -6,146 +6,218 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #f7f9fc;
-  color: #333;
-  scroll-behavior: smooth;
+  background-color: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 header {
-  background-color: #111;
-  color: #fff;
-  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 1rem 0;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 10;
 }
 
-nav {
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav h1 {
-  font-size: 1.5rem;
+.logo {
+  color: #4e00ff;
+  font-weight: 700;
 }
 
-nav ul {
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  gap: 2rem;
 }
 
-nav ul li a {
+.nav-links li a {
   text-decoration: none;
-  color: #fff;
+  color: #222;
   font-weight: 500;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #00bcd4;
+.nav-links li a:hover {
+  color: #4e00ff;
 }
 
-#home {
-  height: 100vh;
-  background: linear-gradient(to right, #006064, #00bcd4);
-  color: white;
+.hero {
+  padding: 4rem 0;
+  background: #f0f4ff;
+}
+
+.hero-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.home-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.hero-text {
+  max-width: 600px;
 }
 
-.home-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.hero-image img {
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(78,0,255,0.2);
+}
+
+.highlight {
+  color: #4e00ff;
+}
+
+.bio {
+  margin: 1rem 0;
 }
 
 .btn {
-  padding: 10px 20px;
-  background: #fff;
-  color: #006064;
+  padding: 0.7rem 1.4rem;
+  border: none;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
+.primary {
+  background: #4e00ff;
+  color: #fff;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.primary:hover {
+  background: #3a00cc;
+}
+
+.outline {
+  border: 2px solid #4e00ff;
+  color: #4e00ff;
+  background: transparent;
+}
+
+.outline:hover {
+  background: #4e00ff;
+  color: #fff;
+}
+
+.section-subtitle {
   text-align: center;
-  color: #006064;
+  margin-bottom: 2rem;
+  color: #555;
 }
 
-.skills-list {
+.project-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 2rem;
   justify-content: center;
-}
-
-.skill {
-  background-color: #e0f7fa;
-  color: #006064;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-}
-
-.project-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
 }
 
 .project-card {
   background: white;
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  width: 300px;
+  transition: transform 0.3s ease;
 }
 
-form {
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.tags span {
+  background: #e0dcff;
+  color: #4e00ff;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4e00ff;
+  text-decoration: none;
+}
+
+.skills-grid {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 1rem;
-  max-width: 500px;
-  margin: auto;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
-form input, form textarea {
-  padding: 12px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.skill-card {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  font-weight: bold;
+  color: #4e00ff;
 }
 
-form button {
-  background-color: #00bcd4;
+.contact {
+  background: #4e00ff;
   color: white;
+  padding: 4rem 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
   padding: 10px;
+  margin-bottom: 1rem;
   border: none;
   border-radius: 5px;
-  font-weight: bold;
+}
+
+.full {
+  width: 100%;
+}
+
+.contact-image img {
+  width: 300px;
+  border-radius: 10px;
 }
 
 footer {
-  background: #111;
-  color: white;
+  background: #222;
+  color: #aaa;
   text-align: center;
   padding: 1rem;
 }

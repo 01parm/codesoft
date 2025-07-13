@@ -2,75 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Parmpreet Kaur | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <nav>
-      <h1>Parmpreet Kaur</h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container nav-container">
+      <h1 class="logo">PORTFOLIO</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section id="home">
-    <div class="home-content">
-      <h2>Hi, I'm Parmpreet</h2>
-      <p>Aspiring Web Developer | Class 10 Student | Tech Explorer</p>
-      <a href="#contact" class="btn">Contact Me</a>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a student at Jawahar Navodaya Vidyalaya, learning the art of building websites. I'm passionate about technology, love solving problems, and enjoy creating things on the web with HTML, CSS, and JavaScript.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Java</div>
-      <div class="skill">Python (Basics)</div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-container">
-      <div class="project-card">
-        <h3>Personal Portfolio</h3>
-        <p>Built a responsive and animated personal portfolio using HTML, CSS, and JavaScript.</p>
+  <section id="home" class="hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h2>Hi, I'm <span class="highlight">Parmpreet Kaur</span></h2>
+        <p>Frontend Developer & Tech Explorer</p>
+        <p class="bio">I love building beautiful and functional web experiences using HTML, CSS, and JavaScript. I’m passionate about solving problems with creativity and code.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn primary">View My Work</a>
+          <a href="#contact" class="btn outline">Contact Me</a>
+          <a href="resume.pdf" class="btn primary" download target="_blank">Download Resume</a>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Emotion Detection AI</h3>
-        <p>AI project to identify emotions from facial expressions using Python and ML tools.</p>
+      <div class="hero-image">
+        <img src="parmpreet.jpg" alt="Parmpreet" />
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      <p class="section-subtitle">Here are some of my recent works that showcase my skills and creativity.</p>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400" alt="Portfolio Project" />
+          <h3>Portfolio Website</h3>
+          <p>A personal website made with HTML, CSS, JS showcasing my work and skills.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JS</span>
+          </div>
+          <a href="https://github.com/YOUR_USERNAME/portfolio-project" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <img src="https://via.placeholder.com/600x400" alt="AI Project" />
+          <h3>Emotion Detector</h3>
+          <p>AI project that identifies emotions from facial expressions using Python.</p>
+          <div class="tags">
+            <span>Python</span><span>ML</span><span>OpenCV</span>
+          </div>
+          <a href="https://github.com/YOUR_USERNAME/emotion-detection" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills & Expertise</h2>
+      <p class="section-subtitle">Technologies I’m confident working with</p>
+      <div class="skills-grid">
+        <div class="skill-card">HTML5</div>
+        <div class="skill-card">CSS3</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Java</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">GitHub</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container contact-container">
+      <div class="contact-form">
+        <h2>Get in Touch</h2>
+        <p>Have a project in mind? Let’s talk!</p>
+        <form id="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="text" placeholder="Subject" />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn primary full">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-image">
+        <img src="https://via.placeholder.com/400x400" alt="Contact" />
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Parmpreet Kaur. All rights reserved.</p>
+    <p>&copy; 2025 Parmpreet Kaur | Built with ❤️ and HTML/CSS/JS</p>
   </footer>
 
   <script src="script.js"></script>
